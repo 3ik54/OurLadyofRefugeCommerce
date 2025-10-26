@@ -1,6 +1,8 @@
 import Navbar from './Navbar.tsx';
 import ImageSlider from "./ImageSlideshow.tsx"
 import Message from "./Message.tsx"
+import { supabase,key } from './supabase_client.ts';
+import Authentication from './Auth.tsx';
 
 function App() {
 
@@ -15,6 +17,7 @@ function App() {
     height: '400px',
     margin: '200px auto 0',
   };
+  console.log(key);
   
   return (
     <div>   
@@ -25,9 +28,11 @@ function App() {
       </div>
 
       < Message />
+      <Authentication/>
       
     
     </div>
+    
    
 
   );
