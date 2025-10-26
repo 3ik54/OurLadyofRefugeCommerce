@@ -21,28 +21,3 @@
     opacity: 0;
 }
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    color: floralwhite;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background .3s;
-}
-
-.prev:hover, .next:hover {
-    background: rgb(32, 49, 67);
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
