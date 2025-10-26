@@ -1,6 +1,11 @@
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar.tsx';
-import ImageSlider from "./ImageSlideshow.tsx"
-import Message from "./Message.tsx"
+import ImageSlider from "./ImageSlideshow.tsx";
+import Message from "./Message.tsx";
+import Contact from "../pages/Contact.tsx";
+import Login from '../pages/Login.tsx';
+import Sellers from '../pages/Sellers.tsx'
+
 
 function App() {
 
@@ -15,23 +20,27 @@ function App() {
     height: '400px',
     margin: '200px auto 0',
   };
-  
-  return (
-    <div>   
-      
-      <Navbar />
+
+  const Home = () => (
+    <>
       <div style={containerStyles}>
         <ImageSlider slides={slides}/>
       </div>
-
-      < Message />
-      
-    
-    </div>
-   
-
+      <Message />
+    </>
   );
-
+  
+  return (
+    <div>   
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/seller" element={<Sellers />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App
