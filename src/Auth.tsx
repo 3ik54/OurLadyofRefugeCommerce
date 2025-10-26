@@ -1,6 +1,6 @@
 import { useState, type FormEvent} from "react";
 import { supabase } from "./supabase_client";
-
+import './Auth.css'
 
 function Authentication(){
 
@@ -23,10 +23,9 @@ function Authentication(){
     }
 
     return(<>
-            <h1>Seller Login</h1>
 
             <form onSubmit={form_submission}>
-                <label htmlFor="">Email <input onChange={(e)=>(setEmail(e.target.value))} 
+                <label className="username_label">Email <input className="username_input" onChange={(e)=>(setEmail(e.target.value))} 
                 type="text" 
                 name="email"  
                 placeholder="email@example.com"/>
@@ -34,9 +33,9 @@ function Authentication(){
                 
                 <br></br>
 
-                <label htmlFor="">Password <input onChange={(e)=>(setPassword(e.target.value))}type="text" name="password" placeholder="password" /></label>
+                <label className="username_label" htmlFor="">Password <input className="username_input" onChange={(e)=>(setPassword(e.target.value))}type="text" name="password" placeholder="password" /></label>
+                <div className="submit_button"><button >Submit</button></div>
                 
-                <button>Submit</button>
 
             </form>
             </>
