@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
 * {
     margin : 0;
+    font-family: "Merriweather", serif;
     padding : 0;
     box-sizing :border-box;
 }
 
 body {
-  background: rgb(32, 49, 67);
+  background: rgb(217,217,217);
 }
 
 a {
