@@ -1,10 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar.tsx';
+
 import ImageSlider from "./ImageSlideshow.tsx";
 import Message from "./Message.tsx";
 import Contact from "../pages/Contact.tsx";
 import Login from '../pages/Login.tsx';
 import Sellers from '../pages/Sellers.tsx'
+import { supabase,key } from './supabase_client.ts';
+import Authentication from './Auth.tsx';
 
 
 function App() {
@@ -21,6 +24,7 @@ function App() {
     margin: '200px auto 0',
   };
 
+
   const Home = () => (
     <>
       <div style={containerStyles}>
@@ -29,6 +33,7 @@ function App() {
       <Message />
     </>
   );
+  console.log(key);
   
   return (
     <div>   
@@ -39,7 +44,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/seller" element={<Sellers />} />
       </Routes>
+      <Authentication/>
     </div>
+
   );
 }
 
