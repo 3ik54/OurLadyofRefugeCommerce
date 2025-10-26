@@ -1,5 +1,6 @@
 import Navbar from './Navbar.tsx';
 import ImageSlider from "./ImageSlideshow.tsx"
+import Message from "./Message.tsx"
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
       <div style={containerStyles}>
         <ImageSlider slides={slides}/>
       </div>
+
+      < Message />
       
     
     </div>
